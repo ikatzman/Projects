@@ -1,0 +1,83 @@
+body {
+  color: lightgrey;
+  background: rgba(0, 0, 0, .85);
+  font-family: 'Courier';
+  font-size: 14px;
+}
+
+#chatlog {
+  color: green;
+  background: rgba(0, 0, 0, .90);
+  overflow-y: scroll;
+  height: 520px;
+	width: 750px;
+  margin-right: 0px;
+}
+
+#chatinput {
+  position: sticky;
+  vertical-align: bottom
+  border: 2px solid black;
+  bottom: 0;
+  left: 0;
+  width: 79.4%;
+  height: 10%;
+}
+
+#message_input {
+  resize: none;
+}
+
+#userlog {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 20%;
+  border: 2px solid black;
+}
+
+#roomcreation {
+  height: 50px;
+  width: 800px;
+}
+
+#pubLog {
+  width: 80%;
+  height: 50px;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+#kickbandm {
+  position: absolute; */
+  top: 400px;
+  right: 0px;
+  height: 50%;
+  width: 20%; */
+  border: 2px solid black;
+}
+
+#kicker {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#kick_them {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#banner {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+#ban_them {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}

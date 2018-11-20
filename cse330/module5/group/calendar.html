@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <link rel="stylesheet" type="text/css" href="calendar.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      //these two jquery functions are part of our creative portion, we used a slideToggle for
+      //our add and edit event panels
+      $(document).ready(function(){
+        $("#flip").click(function(){
+          $("#panel").slideToggle("slow");
+        });
+      });
+
+      $(document).ready(function(){
+        $("#flip2").click(function(){
+          $("#panel2").slideToggle("slow");
+        });
+      });
+
+    </script>
+    <title>JS Calendar</title>
+    <div class='title'>
+      Calendar
+    </div>
+    <br>
+  </head>
+  <body>
+    <!--Login and new user stuff (buttons and text inputs)-->
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="login_btn">Log In</button>
+    <button id="logout_btn">Log Out</button>
+    <p class = "confirm"></p>
+    <div id = "newusermessage">New user? Register here <br> (Log in after creating account):</div>
+    <br>
+    <input type="text" id="new_username" placeholder="New username" />
+    <input type="password" id="new_password" placeholder="New password" />
+    <button id="register_btn">Register</button>
+    <br>
+
+    <!--Menu to add events to the calendar-->
+    <div id="flip">Add Event</div>
+    <div id="panel">
+        <input type="text" id="eventTitle" placeholder="Enter Title"/>
+        <input type="date" id="eventDate"/>
+        <input type="time" id="eventTime"/>
+        <input type="text" id="eventText" placeholder="Enter Event Details"/>
+        <button id="eventSubmit">Submit!</button>
+    </div>
+    <br></br>
+
+    <br>
+    <!--instructions on how to use the calendar-->
+    <div class = "instructions" id = "instr">Click a date to see the event(s) for that day
+    <!--The place where, if clicked, the events of a day will be displayed-->
+    <br></br>
+    <br>
+    Title:
+    <p id = "titleDisplay"></p>
+    <br>
+    Time:
+    <p id = "timeDisplay"></p>
+    <br>
+    Detail:
+    <p id = "detailDisplay"></p>
+    <br>
+    ID (to use for delete and edit):
+    <p id = "IDDisplay"></p>
+    <br>
+    <p id = "noevent"></p>
+    </div>
+
+    <!--The table that the calendar is held in-->
+    <div class = "table">
+      <table id = "full_cal">
+        <div class = "buttons">
+          <button id = "last_month"><<</button>
+          <caption id = "month"></caption>
+          <button id = "next_month">>></button>
+        </div>
+        <!--days of the week-->
+        <tr class = "days">
+          <td>Sun</td>
+          <td>Mon</td>
+          <td>Tue</td>
+          <td>Wed</td>
+          <td>Thu</td>
+          <td>Fri</td>
+          <td>Sat</td>
+        </tr>
+        <!--All of the days in the 6 individual weeks-->
+        <div id = "clear-cal">
+            <tr id = "date1">
+              <td>
+                <div class = "day" id="day1"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+            </tr>
+            <tr id = "date2">
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+            </tr>
+            <tr id = "date3">
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+            </tr>
+            <tr id = "date4">
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+            </tr>
+            <tr id = "date5">
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+            </tr>
+            <tr id = "date6">
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+              <td>
+                <div class = "day"></div>
+              </td>
+        </div>
+      </table>
+    </div>
+
+    <br>
+    <!--Delete event function-->
+    <br>
+    Enter event ID of story you want to delete:
+    <input type="number" id="eventid" placeholder="Event ID"/>
+    <button id="delete_btn">Delete</button>
+    <br>
+
+    <!--Edit event panel-->
+    <div id="flip2">Edit Event</div>
+    <div id="panel2">
+        <input type="number" id="editEventID" placeholder="Enter Event ID"/>
+        <input type="text" id="editEventTitle" placeholder="Enter New Title"/>
+        <input type="date" id="editEventDate" placeholder="Enter New Date"/>
+        <input type="time" id="editEventTime" placeholder="Enter New Time"/>
+        <input type="text" id="editEventText" placeholder="Enter New Event Details"/>
+        <button id="eventEdit">Edit!</button>
+    </div>
+    <br>
+    <br>
+
+    <!--Using all of the js files-->
+    <script type="text/javascript" src="calendar.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="newuser.js"></script>
+    <script type="text/javascript" src="events.js"></script>
+    <script type="text/javascript" src="logout.js"></script>
+    <script type="text/javascript" src="clickDay.js"></script>
+    <script type="text/javascript" src="logout.js"></script>
+  </body>
+</html>

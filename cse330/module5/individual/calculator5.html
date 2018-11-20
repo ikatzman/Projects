@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <link rel="stylesheet" type="text/css" href="jscalc.css"/>
+  <title>JS Calculator</title>
+  <div class='title'>
+    Calculator
+  </div>
+  <br></br>
+</head>
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", calculate, false);
+
+    function calculate(){
+
+      const calc = function(){
+
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let add = document.getElementById("Add");
+        let sub = document.getElementById("Subtract");
+        let mul = document.getElementById("Multiply");
+        let div = document.getElementById("Divide");
+        let res = document.getElementById("solution");
+
+        if(add.checked){
+          solution.value = num1 + num2;
+          document.getElementById('solution').innerHTML = '<p>Answer: ' + solution.value + '<p>';
+        }
+        else if(sub.checked){
+          solution.value = num1 - num2;
+          document.getElementById('solution').innerHTML = '<p>Answer: ' + solution.value + '<p>';
+        }
+        else if(mul.checked){
+          solution.value = num1 * num2;
+          document.getElementById('solution').innerHTML = '<p>Answer: ' + solution.value + '<p>';
+        }
+        else if(div.checked){
+          if(num2 == 0){
+            solution.value = "Cannot divide by 0";
+          }
+          else{
+            solution.value = num1 / num2;
+          }
+          document.getElementById('solution').innerHTML = '<p>Answer: ' + solution.value + '<p>';
+        }
+
+      };
+
+      document.getElementById('num1').addEventListener('keyup', calc, false);
+      document.getElementById('num2').addEventListener('keyup', calc, false);
+      document.getElementById('Add').addEventListener('click', calc, false);
+      document.getElementById('Subtract').addEventListener('click', calc, false);
+      document.getElementById('Multiply').addEventListener('click', calc, false);
+      document.getElementById('Divide').addEventListener('click', calc, false);
+    }
+  </script>
+
+  <label for="num1">First Number:</label>
+  <input type="text" name="num1" id="num1"/>
+  <br></br>
+
+  <label for="num2">Second Number:</label>
+  <input type="text" name="num2" id="num2"/>
+  <br></br>
+
+  <input type="radio" name="rad" value="Add" id="Add"/><label for="Add">Add (+)</label>
+  <input type="radio" name="rad" value="Subtract" id="Subtract"/><label for="Subtract">Subtract (-)</label>
+  <input type="radio" name="rad" value="Multiply" id="Multiply"/><label for="Multiply">Mulitply (*)</label>
+  <input type="radio" name="rad" value="Divide" id="Divide"/><label for="Divide">Divide (/)</label>
+
+  <p id="solution"></p>
+
+<body>

@@ -1,0 +1,8 @@
+mysql> select first_name, last_name, email_address, avg(grades.grade) as average from students join grades on (students.id=grades.student_id) group by id having average < 50;
++------------+-----------+------------------+-----------+
+| first_name | last_name | email_address    | average   |
++------------+-----------+------------------+-----------+
+| Ben        | Harper    | bharper@ffym.com | 43.500000 |
+| Tim        | Armstrong | tArmz@rancid.com | 45.000000 |
++------------+-----------+------------------+-----------+
+2 rows in set (0.00 sec)

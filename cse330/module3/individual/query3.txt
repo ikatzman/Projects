@@ -1,0 +1,9 @@
+mysql> select students.first_name, students.last_name, students.id, grade from grades join students on (grades.student_id=students.id) where course_code like '330S';
++------------+-----------+-----+--------+
+| first_name | last_name | id  | grade  |
++------------+-----------+-----+--------+
+| Ben        | Harper    |  88 |  35.50 |
+| Marc       | Roberge   | 115 |  75.00 |
+| Matt       | Freeman   | 202 | 100.00 |
++------------+-----------+-----+--------+
+3 rows in set (0.00 sec)

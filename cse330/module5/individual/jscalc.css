@@ -1,0 +1,10 @@
+.title{
+  color: rgb(0, 0, 150);
+  font-size: 72px;
+}
+body {
+  background: rgba(50, 220, 0, .5);
+  font-size: 26px;
+  font-family: 'Courier';
+  text-align: center;
+}

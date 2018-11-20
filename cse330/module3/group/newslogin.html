@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <link rel="stylesheet" type="text/css" href="newsite.css"/>
+      <title>News Login</title>
+    </head>
+    <body>
+        Login: 
+        <!--User enters username, and when pressing submit is directed to the file viewing page-->
+        <form name="input" action="userauth.php" method="POST">
+            <label for="usernameinput">Username: </label>
+            <input type="text" name="username" id="usernameinput">
+            <br>
+            <label for='password'>Password: </label>
+            <input type='password' name='password' id="password">
+            <input type='submit' value='Login'>
+        </form>
+        <br></br>
+        <!--If user wants to create account, type new username in the box and press Signup-->
+        
+        <form name='input' action='signup.php' method='POST'>
+            <label for='signupinput'>If you don't have an account, sign up here: </label>
+            <input type='text' name='newusername' id="signupinput"> <br>
+            <label for='signuppass'>Enter password for your account: </label>
+            <input type='password' name='newpassword' id='signuppass'>
+            <input type='submit' value='Signup'>
+        </form>
+    </body>
+</html>
