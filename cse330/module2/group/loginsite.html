@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <link rel="stylesheet" type="text/css" href="fileshare.css"/>
+      <title>File Sharing Site</title>
+    </head>
+    <body>
+        <!--User enters username, and when pressing submit is directed to the file viewing page-->
+        <form name="input" action="fileview.php" method="GET">
+            <label for="usernameinput">Please enter your username: </label>
+            <input type="text" name="username" id="usernameinput">
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <!--If user wants to create account, type new username in the box and press Signup-->
+        <form name='input' action='signup.php' method='GET'>
+            <label for='signupinput'>If you don't have an account, sign up here: </label>
+            <input type='text' name='newusername' id="signupinput">
+            <input type='submit' value='Signup'>
+        </form>
+    </body>
+</html>
