@@ -1,0 +1,173 @@
+body {
+    background-color: white;
+    text-align: center;
+    font-family: monospace;
+}
+
+.state-text {
+    position: relative;
+    font-size: 24px;
+}
+
+#text-area {
+    position: relative;
+    top: 30px;
+}
+
+.chart-div {
+    position: relative;
+    top: 20px;
+    margin-bottom: 50px;
+}
+
+h3{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.tooltip {
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.xAxis {
+    font-size: 12px;
+    /*font-family: monospace;*/
+}
+
+#selector-div {
+    position: fixed;
+    top: 100px;
+    height: 100%;
+    z-index: 1;
+    width: 18%;
+}
+
+a {
+    color: black;
+}
+
+button {
+    border-radius: 5px;
+}
+
+i {
+    width: 25px;
+}
+
+#legend {
+    margin-top: 20px;
+}
+
+#arrow-div button {
+    padding: 5px;
+}
+
+#arrow-div-pie{
+    position: fixed;
+    left: 88%;
+    top: 80%;
+    height: 100%;
+    width: 5%;
+    font-size: 12px;
+}
+
+#arrow-div-bar{
+    position: fixed;
+    left: 94%;
+    top: 80%;
+    height: 100%;
+    width: 5%;
+    font-size: 12px;
+}
+
+#arrow-div-div{
+    position: fixed;
+    left: 82%;
+    top: 80%;
+    height: 100%;
+    width: 5%;
+    font-size: 12px;
+}
+
+#barchart-area {
+    margin-left: 10%;
+}
+
+#barchart-area2 {
+    margin-left: 10%;
+}
+
+.modal-title{
+    text-align: center;
+}
+
+.map {
+    fill-opacity: 1.0;
+}
+
+.map:hover{
+    fill-opacity: 0.75;
+}
+
+.pie {
+    fill-opacity: 0.5;
+}
+
+.pie:hover{
+    fill-opacity: 1.0;
+}
+
+#mapEx {
+    color: black;
+    position: relative;
+    top: -10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#pieEx {
+    color: black;
+    position: relative;
+    top: -10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#barEx {
+    color: black;
+    position: relative;
+    top: -10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#descEx {
+    color: black;
+    position: relative;
+    top: -10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#compareModal {
+    color: black;
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+    /*background-color: darkgray;*/
+}
+
+.container {
+    text-align: left;
+}
+
+.chart-div2 {
+    position: relative;
+    top: 20px;
+    margin-bottom: 0px;
+}
